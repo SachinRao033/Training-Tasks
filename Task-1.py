@@ -129,14 +129,14 @@ print()
 '''for i in range(1,11):
     print(i , end=' ')'''
 
-#Print pattern
-'''
+#Print M patterrn using nested for loop
+
 rows=int(input("Enter number of rows: "))
 for i in range(rows):
   for j in range(rows):
-        if( j==0 or j==rows-1 or (i==j and i<=rows//2)or (i+j==rows-1 and i<=2)):
+        if( j==0 or j==rows-1 or (i==j and i<=rows//2) or (i+j==rows-1 and i<=rows//2)):
+
             print('*', end=' ')
         else:
             print(end=' ')
 print()
-'''
