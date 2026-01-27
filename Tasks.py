@@ -107,13 +107,13 @@ print("Right Shift (b >> 2):", b >> 2)
 #Range of numbers 0-100 print numbers divisible by 3 or 5, if divisible by both print 'py'
 
 for i in range(1,101):
-  if i%3==0 and i%5==0:
-    print('py',end=' ')
-  elif i%3==0 or i%5==0:
-    print(i , end=' ')
+  if i%3!=0 and i%5!=0:
+    print(i ,end=' ')
+  elif i%3==0 and i%5==0:
+    print("py" , end=' ')
     continue
 else:
-    print(i)
+    print("" , end=' ')
 
 
 #slicing of list
@@ -140,8 +140,9 @@ print()
 '''for i in range(1,11):
     print(i , end=' ')'''
 
+
 #Find the grade of a student based on marks obtained
-marks=int(input("Ener Your Mark:"))
+'''marks=int(input("Ener Your Mark:"))
 if 90<=marks<=100:
     print("O")
 elif 80<=marks<=89:
@@ -155,20 +156,22 @@ elif 50<=marks<=59:
 elif marks>100 or marks<0:
     print("Invalid")
 else:
-  print("Fail")
+  print("Fail")'''
+
 
 # Nested If-Else
-# a = int(input("Enter a number: "))
-#if a>10:
-#     if a>=15:
-#         print("Very High")
-#     else:
-#         print("High")
-# else:
-#     if a<=5:
-#         print("Very Low")
-#     else:
-#         print("Low")
+'''a = int(input("Enter a number: "))
+if a>10:
+     if a>=15:
+         print("Very High")
+     else:
+         print("High")
+else:
+     if a<=5:
+         print("Very Low")
+     else:
+         print("Low")
+'''
 
 
 # Program to print M pattern using loops
@@ -193,7 +196,7 @@ for i in range(rows):
 
 
 # Program to print inverted pyramid pattern
-rows = int(input("Enter number of rows: "))
+'''rows = int(input("Enter number of rows: "))
 for i in range(rows, 0, -1):
-    print(" " * (rows - i) + "* " * i)
+    print(" " * (rows - i) + "* " * i)'''
 
