@@ -116,6 +116,16 @@ else:
     print(i)
 
 
+#slicing of list
+'''my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+print("Original List:", my_list )
+print("Sliced List (Index 2 to 5):", my_list[2:6])
+print("Sliced List (From Start to Index 4):", my_list[:5])
+print("Sliced List (From Index 5 to End):", my_list[5:])
+print("Sliced List (Every 2nd Element):", my_list[::2])
+print("Reversed List:", my_list[::-1])'''
+
+
 
 #Print first 10 natural numbers using while loop
 '''i=1
@@ -125,18 +135,7 @@ while i<=10:
 print()
 '''
 
+
 #Print first 10 natural numbers using for loop
 '''for i in range(1,11):
     print(i , end=' ')'''
-
-#Print M patterrn using nested for loop
-
-rows=int(input("Enter number of rows: "))
-for i in range(rows):
-  for j in range(rows):
-        if( j==0 or j==rows-1 or (i==j and i<=rows//2) or (i+j==rows-1 and i<=rows//2)):
-
-            print('*', end=' ')
-        else:
-            print(end=' ')
-print()
