@@ -139,3 +139,61 @@ print()
 #Print first 10 natural numbers using for loop
 '''for i in range(1,11):
     print(i , end=' ')'''
+
+#Find the grade of a student based on marks obtained
+marks=int(input("Ener Your Mark:"))
+if 90<=marks<=100:
+    print("O")
+elif 80<=marks<=89:
+    print("A+")
+elif 70<=marks<=79:
+    print("A")
+elif 60<=marks<=69:
+    print("B")
+elif 50<=marks<=59:
+    print("C")
+elif marks>100 or marks<0:
+    print("Invalid")
+else:
+  print("Fail")
+
+# Nested If-Else
+# a = int(input("Enter a number: "))
+#if a>10:
+#     if a>=15:
+#         print("Very High")
+#     else:
+#         print("High")
+# else:
+#     if a<=5:
+#         print("Very Low")
+#     else:
+#         print("Low")
+
+
+# Program to print M pattern using loops
+'''size = int(input("Enter the dimension: "))
+for row in range(size):
+    for col in range(size):
+        if (
+            col == 0 or col == size - 1 or
+            (row == col and row < size // 2 + 1) or
+            (row + col == size - 1 and row < size // 2 + 1)
+        ):
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+    print()'''
+
+# Program to print pyramid pattern
+'''rows = int(input("Enter number of rows: "))
+for i in range(rows):
+
+    print(" " * (rows - i - 1) + "* " * (i + 1))'''
+
+
+# Program to print inverted pyramid pattern
+rows = int(input("Enter number of rows: "))
+for i in range(rows, 0, -1):
+    print(" " * (rows - i) + "* " * i)
+
