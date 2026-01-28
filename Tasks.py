@@ -106,24 +106,24 @@ print("Right Shift (b >> 2):", b >> 2)
 
 #Range of numbers 0-100 print numbers divisible by 3 or 5, if divisible by both print 'py'
 
-for i in range(1,101):
+'''for i in range(1,101):
   if i%3!=0 and i%5!=0:
     print(i ,end=' ')
   elif i%3==0 and i%5==0:
     print("py" , end=' ')
     continue
 else:
-    print("" , end=' ')
+    print("" , end=' ')'''
 
 
 #slicing of list
-'''my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 print("Original List:", my_list )
 print("Sliced List (Index 2 to 5):", my_list[2:6])
 print("Sliced List (From Start to Index 4):", my_list[:5])
 print("Sliced List (From Index 5 to End):", my_list[5:])
 print("Sliced List (Every 2nd Element):", my_list[::2])
-print("Reversed List:", my_list[::-1])'''
+print("Reversed List:", my_list[::-1])
 
 
 
