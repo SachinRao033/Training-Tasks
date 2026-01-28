@@ -117,14 +117,19 @@ else:
 
 
 #slicing of list
-my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+'''my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 print("Original List:", my_list )
 print("Sliced List (Index 2 to 5):", my_list[2:6])
 print("Sliced List (From Start to Index 4):", my_list[:5])
 print("Sliced List (From Index 5 to End):", my_list[5:])
 print("Sliced List (Every 2nd Element):", my_list[::2])
-print("Reversed List:", my_list[::-1])
+print("Reversed List:", my_list[::-1])'''
 
+
+#Remove element from list using pop()
+'''list = [10, 20, 30, 40, 50]
+list.pop(2)  # Removes element at index 2
+print(list)'''
 
 
 #Print first 10 natural numbers using while loop
@@ -188,6 +193,7 @@ for row in range(size):
             print(" ", end=" ")
     print()'''
 
+
 # Program to print pyramid pattern
 '''rows = int(input("Enter number of rows: "))
 for i in range(rows):
@@ -199,4 +205,82 @@ for i in range(rows):
 '''rows = int(input("Enter number of rows: "))
 for i in range(rows, 0, -1):
     print(" " * (rows - i) + "* " * i)'''
+
+
+#set operations
+'''set1 = {1, 2, 3, 4, 5, 6, 7}
+set2 = {4, 5, 6, 7, 8, 9, 10}
+#set1.add(8)
+#set2.remove(10)
+#set1.clear()
+print(set1.union(set2))
+print(set1.intersection(set2))
+print(set1.difference(set2))
+print(set1.symmetric_difference(set2))
+
+#print("Union:", set1 | set2)
+#print("Intersection:", set1 & set2)
+#print("Difference (set1 - set2):", set1 - set2)
+#print("Symmetric Difference:", set1 ^ set2)'''
+
+
+#split string into words
+'''a = "Hello, welcome to Stackly Training"
+words = a.split()
+print(words)'''
+
+#join words into a string
+'''js = ' '.join(words)
+print(js)'''
+
+#count occurrences of a substring
+'''count = a.count("l")
+print(count)'''
+
+#find position of a substring
+'''position = a.find("Stackly")
+print(position)'''
+
+#isalpha() and isdigit() and isspace() and isalnum()
+'''s1 = "HelloWorld"
+s2 = "Hello123"
+s3 = "   "
+s4 = "Hello World 123"
+print(s1.isalpha())  # True
+print(s2.isdigit())  # False
+print(s3.isspace())  # True
+print(s4.isalnum())  # False'''
+
+
+#is and is not
+'''x = [1, 2, 3]
+y = x
+z = [1, 2, 3]
+print(x is y)      # True
+print(x is z)      # False
+print(x is not z)  # True'''
+
+
+#in and not in
+'''fruits = ["apple", "banana", "cherry"]
+print("banana" in fruits)      # True
+print("grape" not in fruits)   # True'''
+
+
+#tuple unpacking and packing
+'''# Tuple packing
+coordinates = (10, 20)
+A=10
+B=20
+print("Coordinates A:", A)
+print("Coordinates B:", B)
+
+# Tuple unpacking
+point = (11, 22)
+x, y = point
+print("x:", x)
+print("y:", y)'''
+
+
+
 
