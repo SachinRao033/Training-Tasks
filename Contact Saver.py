@@ -67,6 +67,7 @@ while True:
     elif ip==5:                                                                     #---to exit
         break
     else:
-        print("Invalid input\n------------>Please try again<------------")
+        print(" Invalid input\n ------------> PLEASE TRY AGAIN <------------ ")
+        continue
 
 #mysql_connector.close()  #-----> helps to close the connection with database
