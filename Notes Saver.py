@@ -7,12 +7,12 @@ mysql_connector = mysql.connector.connect(
     password="root",
     database="notes" )
 
-cursor = mysql_connector.cursor()
+cursor = mysql_connector.cursor()               #-----> helps to execute sql commands
 
 
 def createNote(title,note_content):
-    cursor.execute("INSERT INTO notescontent_saver (title, note_content, date)"" VALUES (%s, %s, CURDATE())", (title, note_content)) #-----> helps to insert data into database
-    mysql_connector.commit()         #-----> helps to save changes in database
+    cursor.execute("INSERT INTO notescontent_saver (title, note_content, date) VALUES (%s, %s, CURDATE())", (title, note_content)) #-----> helps to insert data into database
+    mysql_connector.commit()                            #-----> helps to save changes in database
 
 def readNote():
     cursor.execute("SELECT * FROM notescontent_saver")  #-----> helps to read data from database
@@ -22,29 +22,32 @@ def readNote():
         s_no, title, note_content, date = row
         print(f"SERIAL NO:- {s_no}, TITLE:- {title}, NOTE CONTENT:- {note_content}, DATE:- {date.strftime('%Y-%m-%d')} \n")
 
-def updateNote(s_no, title, note_content, date):                                                 #----> helps to update data in database
+def updateNote(s_no, title, note_content, date):                                  #----> helps to update data in database
     update_fields = []
     update_values = []
 
+    f=update_fields     #f for fields
+    v=update_values     #v for values
+
     if title is not None:
-        update_fields.append("title=%s")
-        update_values.append(title)
+        f.append("title=%s")
+        v.append(title)
     if note_content is not None:
-        update_fields.append("note_content=%s")
-        update_values.append(note_content)
+        f.append("note_content=%s")
+        v.append(note_content)
     if date is not None:
-        update_fields.append("date=%s")
-        update_values.append(date)
+        f.append("date=%s")
+        v.append(date)
 
     if update_fields:
-        query = (f"UPDATE notescontent_saver SET {', '.join(update_fields)} WHERE s_no=%s")
-        update_values.append(s_no)
-        cursor.execute(query, tuple(update_values))
+        query = (f"UPDATE notescontent_saver SET {', '.join(f)} WHERE s_no=%s")
+        v.append(s_no)
+        cursor.execute(query, tuple(v))
 
     mysql_connector.commit()
 
 def deleteNote(s_no):
-    cursor.execute("DELETE FROM notescontent_saver WHERE s_no=%s", (s_no,))                  #-----> helps to delete data from database
+    cursor.execute("DELETE FROM notescontent_saver WHERE s_no=%s", (s_no,))             #-----> helps to delete data from database
     mysql_connector.commit()
 
 def searchNote(title,note_content,date):
@@ -53,7 +56,7 @@ def searchNote(title,note_content,date):
 
 while True:
     print(" 0---> To Read Notes\n 1 --> Create Note\n 2---> Update Note\n 3---> Search Note\n 4---> Delete Note\n 5---> Exit")
-    ip = int(input("Enter a number: "))                                           #-----> to take input from user
+    ip = int(input("Enter a number: "))                                             #-----> to take input from user
 
     if ip==0:
         readNote()
@@ -92,7 +95,7 @@ while True:
     else:
         print(" Invalid Input\n ------------> PLEASE TRY AGAIN <------------ ")
 
-    
 
-#mysql_connector.close()  #-----> helps to close the connection with database
+
+#mysql_connector.close()                                                        #-----> helps to close the connection with database
 
