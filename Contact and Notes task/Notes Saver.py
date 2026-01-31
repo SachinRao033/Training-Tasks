@@ -56,19 +56,19 @@ def searchNote(title,note_content,date):
 
 while True:
     print(" 0---> To Read Notes\n 1 --> Create Note\n 2---> Update Note\n 3---> Search Note\n 4---> Delete Note\n 5---> Exit")
-    ip = int(input("Enter a number: "))                                             #-----> to take input from user
+    ip = int(input(" Enter a number: "))                                             #-----> to take input from user
 
     if ip==0:
         readNote()
     elif ip==1:                                                                     #---to create note
-        title=input("Enter title: ")
-        note_content=input("Enter note content: ")
+        title=input(" Enter title: ")
+        note_content=input(" Enter note content: ")
         createNote(title, note_content)
     elif ip==2:                                                                     #---to update note
-        s_no=int(input("Enter serial number to update: "))
-        title=input("Enter new title (or) press enter to skip: ")
-        note_content=input("Enter new note content (or) press enter to skip: ")
-        date=input("Enter new date (YYYY-MM-DD) (or) press enter to skip: ")
+        s_no=int(input(" Enter serial number to update: "))
+        title=input(" Enter new title (or) press enter to skip: ")
+        note_content=input(" Enter new note content (or) press enter to skip: ")
+        date=input(" Enter new date (YYYY-MM-DD) (or) press enter to skip: ")
         if title=="":
             title=None
         if note_content=="":
@@ -77,9 +77,9 @@ while True:
             date=None
         updateNote(s_no, title, note_content, date)
     elif ip==3:                                                                     #---to search note
-        title=input("Enter title to search (or) press enter to skip: ")
-        note_content=input("Enter note content or keyword to search (or) press enter to skip: ")
-        date=input("Enter date to search (or) press enter to skip: ")
+        title=input(" Enter title to search (or) press enter to skip: ")
+        note_content=input(" Enter note content or keyword to search (or) press enter to skip: ")
+        date=input(" Enter date to search (or) press enter to skip: ")
         if title=="":
             title=None
         if note_content=="":
@@ -88,7 +88,7 @@ while True:
             date=None
         searchNote(title,note_content,date)
     elif ip==4:                                                                     #---to delete contact
-        s_no=int(input("Enter serial number to delete: "))
+        s_no=int(input(" Enter serial number to delete: "))
         deleteNote(s_no)
     elif ip==5:                                                                     #---to exit
         break

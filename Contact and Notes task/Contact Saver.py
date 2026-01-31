@@ -35,7 +35,7 @@ def deleteContact(id):
     mysql_connector.commit()
 
 while True:
-    print("0---> to read contact\n 1 --> create contact\n 2---> update contact\n 3---> search contact\n 4---> delete contact\n 5---> exit")
+    print(" 0---> to read contact\n 1 --> create contact\n 2---> update contact\n 3---> search contact\n 4---> delete contact\n 5---> exit")
     ip = int(input("Enter a number: "))                                             #-----> to take input from user
     if ip==0:
         readContact()
