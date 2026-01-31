@@ -11,11 +11,11 @@ cursor = mysql_connector.cursor()               #-----> helps to execute sql com
 
 
 def createNote(title,note_content):
-    cursor.execute("INSERT INTO notescontent_saver (title, note_content, date) VALUES (%s, %s, CURDATE())", (title, note_content)) #-----> helps to insert data into database
+    cursor.execute("INSERT INTO notes_saver (title, note_content, date) VALUES (%s, %s, CURDATE())", (title, note_content)) #-----> helps to insert data into database
     mysql_connector.commit()                            #-----> helps to save changes in database
 
 def readNote():
-    cursor.execute("SELECT * FROM notescontent_saver")  #-----> helps to read data from database
+    cursor.execute("SELECT * FROM notes_saver")  #-----> helps to read data from database
     rows = cursor.fetchall()
 
     for row in rows:
@@ -40,18 +40,18 @@ def updateNote(s_no, title, note_content, date):                                
         v.append(date)
 
     if update_fields:
-        query = (f"UPDATE notescontent_saver SET {', '.join(f)} WHERE s_no=%s")
+        query = (f"UPDATE notes_saver SET {', '.join(f)} WHERE s_no=%s")
         v.append(s_no)
         cursor.execute(query, tuple(v))
 
     mysql_connector.commit()
 
 def deleteNote(s_no):
-    cursor.execute("DELETE FROM notescontent_saver WHERE s_no=%s", (s_no,))             #-----> helps to delete data from database
+    cursor.execute("DELETE FROM notes_saver WHERE s_no=%s", (s_no,))             #-----> helps to delete data from database
     mysql_connector.commit()
 
 def searchNote(title,note_content,date):
-    cursor.execute("SELECT * FROM notescontent_saver WHERE title=%s OR note_content=%s OR date=%s", (title,note_content,date))  #-----> helps to search data from database
+    cursor.execute("SELECT * FROM notes_saver WHERE title=%s OR note_content=%s OR date=%s", (title,note_content,date))  #-----> helps to search data from database
     print(cursor.fetchall())
 
 while True:
