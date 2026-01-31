@@ -13,3 +13,10 @@ SELECT * FROM notes_saver;
 #drop table notes_saver;
 
 INSERT INTO notes_saver (s_no,title,note_content,date) VALUES(1,"SQL CRUD","CRUD Operations in SQL -- Create, Read, Update, Delete",curdate());
+
+ALTER TABLE `notes`.`notescontent_saver`
+RENAME TO  `notes`.`notes_saver` ;
+
+
+
+
