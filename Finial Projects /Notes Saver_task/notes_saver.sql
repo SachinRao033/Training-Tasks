@@ -1,5 +1,5 @@
-Create Database Notes;
-Use Notes;
+Create Database notes;
+Use notes;
 
 Create table notes_saver (
 s_no INT AUTO_INCREMENT PRIMARY KEY,
